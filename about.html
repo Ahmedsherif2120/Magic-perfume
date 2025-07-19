@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-ar="ماجيك للعطور - من نحن" data-en="Magic Perfumes - About Us">ماجيك للعطور - من نحن</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background for the entire page */
+    body {
+      background-image: url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6'); /* New marble background */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Hero Section Styling */
+    .hero-section {
+      background-image: url('https://images.unsplash.com/photo-1615634265069-613576c15af6'); /* Replace with your hero image */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
+
+  <div class="min-h-screen">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-4 bg-black shadow">
+      <div class="text-3xl font-bold text-yellow-400" data-ar="ماجيك" data-en="Magic">Magic</div>
+      <div class="flex gap-4 items-center">
+        <a href="index.html" class="text-yellow-400 hover:text-yellow-300 transition" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="men.html" class="text-yellow-400 hover:text-yellow-300 transition" data-ar="عطور رجالية" data-en="Men's Perfumes">عطور رجالية</a>
+        <a href="women.html" class="text-yellow-400 hover:text-yellow-300 transition" data-ar="عطور نسائية" data-en="Women's Perfumes">عطور نسائية</a>
+        <a href="about.html" class="text-yellow-500 font-bold" data-ar="من نحن" data-en="About Us">من نحن</a>
+        <a href="contact.html" class="text-yellow-400 hover:text-yellow-300 transition" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+        <button id="lang-toggle" class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300 transition">EN</button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center py-32 text-white">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6" data-ar="من نحن" data-en="About Us">من نحن</h1>
+        <p class="text-xl md:text-2xl mb-8" data-ar="نحن 'ماجيك للعطور'، علامة متخصصة في تصميم وتقديم أفضل تركيبات العطور الفاخرة." data-en="We are 'Magic Perfumes', a brand specialized in designing and providing the best luxury perfume compositions.">
+          نحن "ماجيك للعطور"، علامة متخصصة في تصميم وتقديم أفضل تركيبات العطور الفاخرة.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="max-w-4xl mx-auto px-4 py-12 text-center">
+      <p class="text-white text-3xl leading-relaxed font-bold"> <!-- Increased text size to text-xl -->
+        <span data-ar="نؤمن بأن العطر يعكس شخصية كل فرد، ولذلك نحرص على اختيار أجود المكونات وتقديمها في تصميمات أنيقة وبسعر مناسب للجميع." 
+              data-en="We believe that fragrance reflects the personality of each individual, which is why we are committed to selecting the finest ingredients and presenting them in elegant designs at affordable prices for everyone.">
+          نؤمن بأن العطر يعكس شخصية كل فرد، ولذلك نحرص على اختيار أجود المكونات وتقديمها في تصميمات أنيقة وبسعر مناسب للجميع.
+        </span>
+        <br /><br />
+        <span data-ar="هدفنا هو أن نصبح الخيار الأول لعشاق العطور في الوطن العربي من خلال التميز في الجودة والخدمة." 
+              data-en="Our goal is to become the first choice for perfume lovers in the Arab world by excelling in quality and service.">
+          هدفنا هو أن نصبح الخيار الأول لعشاق العطور في الوطن العربي من خلال التميز في الجودة والخدمة.
+        </span>
+      </p>
+    </section>
+  </div>
+
+  <!-- Language Toggle Script -->
+  <script>
+    const toggle = document.getElementById("lang-toggle");
+    let currentLang = localStorage.getItem('language') || 'ar'; // استرجاع اللغة من التخزين المحلي
+
+    // تحديث اللغة عند تحميل الصفحة
+    document.addEventListener("DOMContentLoaded", () => {
+      updateLanguage();
+    });
+
+    toggle.addEventListener("click", () => {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      localStorage.setItem('language', currentLang); // تخزين اللغة في التخزين المحلي
+      updateLanguage();
+    });
+
+    function updateLanguage() {
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      toggle.textContent = currentLang === 'ar' ? 'EN' : 'AR';
+
+      // تحديث النصوص بناءً على اللغة المختارة
+      document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+        element.textContent = currentLang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+      });
+    }
+  </script>
+
+</body>
+</html>

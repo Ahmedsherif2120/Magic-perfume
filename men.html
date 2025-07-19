@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-ar="ماجيك للعطور - عطور رجالية" data-en="Magic Perfumes - Men's Perfumes">ماجيك للعطور - عطور رجالية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background for the entire page */
+    body {
+      background-image: url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6'); /* New marble background */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Hero Section Styling */
+    .hero-section {
+      background-image: url('https://images.unsplash.com/photo-1615634265069-613576c15af6'); /* Replace with your hero image */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 bg-black shadow">
+    <div class="text-3xl font-bold text-yellow-400" data-ar="ماجيك" data-en="Magic">Magic</div>
+    <div class="flex gap-6 items-center">
+      <a href="index.html" class="text-yellow-400 hover:text-yellow-300 transition font-semibold" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="men.html" class="text-yellow-400 hover:text-yellow-300 transition font-semibold" data-ar="عطور رجالية" data-en="Men's Perfumes">عطور رجالية</a>
+      <a href="women.html" class="text-yellow-400 hover:text-yellow-300 transition font-semibold" data-ar="عطور نسائية" data-en="Women's Perfumes">عطور نسائية</a>
+      <a href="about.html" class="text-yellow-400 hover:text-yellow-300 transition font-semibold" data-ar="من نحن" data-en="About Us">من نحن</a>
+      <a href="contact.html" class="text-yellow-400 hover:text-yellow-300 transition font-semibold" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+      <button id="lang-toggle" class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300 transition">EN</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center py-32 text-white">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6" data-ar="عطور رجالية" data-en="Men's Perfumes">عطور رجالية</h1>
+      <p class="text-xl md:text-2xl mb-8" data-ar="اكتشف مجموعتنا المختارة من العطور الرجالية الفاخرة" data-en="Discover our selected collection of luxury men's perfumes.">
+        اكتشف مجموعتنا المختارة من العطور الرجالية الفاخرة
+      </p>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 pb-20">
+
+    <!-- المنتج 11 -->
+    <a href="payment.html?title=السيف%20الذهبي&image=images/p11.jpg&price=350" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p11.jpg" alt="عطر السيف الذهبي" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="السيف الذهبي" data-en="Golden Sword">السيف الذهبي</h2>
+      <p class="text-gray-600" data-ar="عطر ملكي برائحة العنبر والعود" data-en="A royal fragrance with amber and oud notes.">عطر ملكي برائحة العنبر والعود</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="350 جنيه" data-en="350 EGP">350 جنيه</p>
+    </a>
+
+    <!-- المنتج 12 -->
+    <a href="payment.html?title=المحيط%20العميق&image=images/p12.jpg&price=180" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p12.jpg" alt="عطر المحيط" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="المحيط العميق" data-en="Deep Ocean">المحيط العميق</h2>
+      <p class="text-gray-600" data-ar="عطر منعش مع لمسات بحرية" data-en="A fresh fragrance with aquatic notes.">عطر منعش مع لمسات بحرية</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="180 جنيه" data-en="180 EGP">180 جنيه</p>
+    </a>
+
+    <!-- المنتج 13 -->
+    <a href="payment.html?title=الأسطورة&image=images/p13.jpg&price=210" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p13.jpg" alt="عطر الأسطورة" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="الأسطورة" data-en="The Legend">الأسطورة</h2>
+      <p class="text-gray-600" data-ar="عطر شرقي مع لمسات من الفانيليا" data-en="An oriental fragrance with vanilla notes.">عطر شرقي مع لمسات من الفانيليا</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="210 جنيه" data-en="210 EGP">210 جنيه</p>
+    </a>
+
+    <!-- المنتج 14 -->
+    <a href="payment.html?title=الشعلة&image=images/p14.jpg&price=195" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p14.jpg" alt="عطر الشعلة" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="الشعلة" data-en="The Flame">الشعلة</h2>
+      <p class="text-gray-600" data-ar="عطر حار مع لمسات من العنبر" data-en="A warm fragrance with amber notes.">عطر حار مع لمسات من العنبر</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="195 جنيه" data-en="195 EGP">195 جنيه</p>
+    </a>
+
+    <!-- المنتج 15 -->
+    <a href="payment.html?title=الفارس&image=images/p15.jpg&price=185" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p15.jpg" alt="عطر الفارس" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="الفارس" data-en="The Knight">الفارس</h2>
+      <p class="text-gray-600" data-ar="عطر جلدي مع لمسات من التوابل" data-en="A leather fragrance with spice notes.">عطر جلدي مع لمسات من التوابل</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="185 جنيه" data-en="185 EGP">185 جنيه</p>
+    </a>
+
+    <!-- المنتج 16 -->
+    <a href="payment.html?title=الذهب%20الأسود&image=images/p16.jpg&price=220" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p16.jpg" alt="عطر الذهب الأسود" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="الذهب الأسود" data-en="Black Gold">الذهب الأسود</h2>
+      <p class="text-gray-600" data-ar="عطر خشبي مع لمسات من الباتشولي" data-en="A woody fragrance with patchouli notes.">عطر خشبي مع لمسات من الباتشولي</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="220 جنيه" data-en="220 EGP">220 جنيه</p>
+    </a>
+
+    <!-- المنتج 17 -->
+    <a href="payment.html?title=الملك&image=images/p17.jpg&price=230" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p17.jpg" alt="عطر الملك" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="الملك" data-en="The King">الملك</h2>
+      <p class="text-gray-600" data-ar="عطر فاخر مع لمسات من العود" data-en="A luxury fragrance with oud notes.">عطر فاخر مع لمسات من العود</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="230 جنيه" data-en="230 EGP">230 جنيه</p>
+    </a>
+
+    <!-- المنتج 18 -->
+    <a href="payment.html?title=الفخامة&image=images/p18.jpg&price=240" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p18.jpg" alt="عطر الفخامة" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="الفخامة" data-en="Luxury">الفخامة</h2>
+      <p class="text-gray-600" data-ar="عطر نادر مع لمسات من الزعفران" data-en="A rare fragrance with saffron notes.">عطر نادر مع لمسات من الزعفران</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="240 جنيه" data-en="240 EGP">240 جنيه</p>
+    </a>
+
+    <!-- المنتج 19 -->
+    <a href="payment.html?title=السحر&image=images/p19.jpg&price=175" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p19.jpg" alt="عطر السحر" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="السحر" data-en="Magic">السحر</h2>
+      <p class="text-gray-600" data-ar="عطر ساحر مع لمسات من الزهور" data-en="A magical fragrance with floral notes.">عطر ساحر مع لمسات من الزهور</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="175 جنيه" data-en="175 EGP">175 جنيه</p>
+    </a>
+
+    <!-- المنتج 20 -->
+    <a href="payment.html?title=الغموض&image=images/p20.jpg&price=190" class="border p-4 rounded-lg shadow-lg text-center bg-white transition-transform transform hover:scale-105">
+      <img src="images/p20.jpg" alt="عطر الغموض" class="w-full h-60 object-cover mb-4 rounded" />
+      <h2 class="text-xl font-bold mb-2" data-ar="الغموض" data-en="Mystery">الغموض</h2>
+      <p class="text-gray-600" data-ar="عطر غامض مع لمسات من البخور" data-en="A mysterious fragrance with incense notes.">عطر غامض مع لمسات من البخور</p>
+      <p class="text-amber-600 font-semibold mt-2" data-ar="190 جنيه" data-en="190 EGP">190 جنيه</p>
+    </a>
+
+  </section>
+
+  <!-- Language Toggle Script -->
+  <script>
+    const toggle = document.getElementById("lang-toggle");
+    let currentLang = localStorage.getItem('language') || 'ar'; // استرجاع اللغة من التخزين المحلي
+
+    // تحديث اللغة عند تحميل الصفحة
+    document.addEventListener("DOMContentLoaded", () => {
+      updateLanguage();
+    });
+
+    toggle.addEventListener("click", () => {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      localStorage.setItem('language', currentLang); // تخزين اللغة في التخزين المحلي
+      updateLanguage();
+    });
+
+    function updateLanguage() {
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      toggle.textContent = currentLang === 'ar' ? 'EN' : 'AR';
+
+      // تحديث النصوص بناءً على اللغة المختارة
+      document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+        element.textContent = currentLang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+      });
+    }
+  </script>
+
+</body>
+</html>
